@@ -1,12 +1,5 @@
-// const { test } = require('@playwright/test');
-
-// test('Capture screenshot of the entire scrollable webpage', async({ page }) => {
-
-//     await page.goto('https://myifew.com/')
-//     await page.screenshot({ path: 'screenshot/fullPage.png', fullPage: true, timeout: 100000 })
-// })
-
-const { chromium } = require("playwright");
+const { chromium, devices } = require('playwright');
+const iPhone = devices['iPhone 13 Pro'];
 
 (async() => {
     let browser = await chromium.launch();
